@@ -1,19 +1,21 @@
 import React from 'react'
+import {Link} from 'react-router-dom';
 
-function Issue({ title, url, body, labels }) {
 
+function Issue({ issue }) {
+    const {title, url, body, labels, number} = issue;
     return (
         <div>
-            <h3>{title}</h3>
-            <a href={url}>{url}</a>
-            <p>{body}</p>
+            {/* <h3>{title}</h3> */}
+            <Link to={`/issue/${number}`}>{title}</Link>
+            {/* <p>{body}</p>
             {labels.map((label, index) => {
                 return (
                     <div key={index}>
                         <p>{label.name}</p>
                     </div>
                 )
-            })}
+            })} */}
         </div>
     )
 }
