@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Form, Button, Card, ListGroup, ListGroupItem } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.css';
+import { Link } from 'react-router-dom';
 
 class User extends Component {
 
@@ -16,6 +17,8 @@ class User extends Component {
             location: '',
             profileUrl: '',
             img: '',
+            company: '',
+            blog: '',
         }
     }
 
@@ -59,7 +62,7 @@ class User extends Component {
                         Submit
                 </Button>
                 </Form>
-                <div>
+                <div className="m-4">
                     {!this.state.hidden && <div className='row'>
                         {this.state.users.map((user, index) => {
                             return (
@@ -73,7 +76,9 @@ class User extends Component {
                                         </Card.Text>
                                     </Card.Body>
                                     <ListGroup className="list-group-flush">
-                                        <ListGroupItem>{user.html_url}</ListGroupItem>
+                                        <a href={user.html_url}><ListGroupItem>{user.html_url}</ListGroupItem></a>
+                                        <ListGroupItem>{user.company}</ListGroupItem>
+                                        <a href={user.blog}><ListGroupItem>{user.blog}</ListGroupItem></a>
                                         <ListGroupItem>{user.location}</ListGroupItem>
                                     </ListGroup>
                                 </Card>

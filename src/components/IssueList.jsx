@@ -33,9 +33,8 @@ class IssueList extends Component {
                 <h1>Git Issues</h1>
                 {this.state.issues.map((issue, index) => {
                     return (
-                        <div>
-                            <Issue key={index} issue={issue}></Issue>
-                        </div>
+                        <Issue key={index} issue={issue}></Issue>
+
                     )
                 })}
             </div>
