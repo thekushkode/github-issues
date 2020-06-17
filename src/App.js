@@ -3,6 +3,7 @@ import './App.css';
 import IssueList from './components/IssueList';
 import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
 import IssueDetail from './components/IssueDetail';
+import User from './components/User';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Switch>
           <Route exact path='/' component={IssueList}></Route>
           <Route path='/issue/:issue_number' component={IssueDetail}></Route>
+          <Route path='/user' component={User}></Route>
         </Switch>
       </div>
     </Router>

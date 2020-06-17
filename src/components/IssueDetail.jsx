@@ -25,9 +25,9 @@ class IssueDetail extends Component {
             })
     }
 
-    componentDidMount = () => {
-        this.getIssueDetails();
-    }
+    // componentDidMount = () => {
+    //     this.getIssueDetails();
+    // }
 
     render() {
         if (!this.state.details) {
