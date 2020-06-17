@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Issue from './Issue';
-import IssueDetail from './IssueDetail';
 
 
 class IssueList extends Component {
@@ -33,7 +32,9 @@ class IssueList extends Component {
                 <h1>Git Issues</h1>
                 {this.state.issues.map((issue, index) => {
                     return (
-                        <Issue key={index} issue={issue}></Issue>
+                        <div>
+                            <Issue key={index} issue={issue}></Issue>
+                        </div>
 
                     )
                 })}
